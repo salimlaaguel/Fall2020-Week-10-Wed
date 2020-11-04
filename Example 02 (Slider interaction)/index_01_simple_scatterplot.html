@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scatter plot with Sliders</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="js/scatter_plot.js?92"></script>
+    <script src="js/random_data_generator.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        svg{
+            width: 50vw;
+            height: 50vw;
+        }
+    </style>
+</head>
+<body>
+<svg id="scatter_plot" viewBox="0 0 1000 1000">
+</svg>
+<script>
+    let rnd_data =random_data(100)
+    scatter_plot(data=rnd_data,ax="#scatter_plot",
+        title="Random Data",
+        xLabel="X Axis",
+        yLabel="Y Axis")
+</script>
+</body>
+</html>
