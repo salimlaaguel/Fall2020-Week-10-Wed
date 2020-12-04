@@ -11,8 +11,7 @@
     </style>
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="js/scatter_plot_withSlider.js?22000"></script>
-    <script src="js/scatter_plot_with_brushSelect.js?22"></script>
+    <script src="js/scatter_plot_withSlider.js"></script>
 </head>
 <body>
 <svg id="scatter_plot" viewBox="0 0 1000 1000">
@@ -48,7 +47,7 @@
                 yLabel="culmen_depth_mm")
             d3.select("#sliderX").on("input", function() {
                 let value = +this.value; // get the value of the slider
-                let filtered_data = d3.filter(formatted_data,function(d){return d.r<value})
+                let filtered_data = d3.filter(formatted_data,function(d){return d.r})
                 scatter_plot_update(filtered_data)
             });
         }
